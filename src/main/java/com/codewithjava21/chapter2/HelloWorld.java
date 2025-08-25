@@ -1,8 +1,8 @@
 package com.codewithjava21.chapter2;
 
 public class HelloWorld {
-    private static String firstName = "Dzmitry";
-    private static int age = 52;
+    final private static String firstName = "Dzmitry";
+    final private static int age = 52;
 
     public static void main(String[] args) {
         System.out.println("Hello World");
