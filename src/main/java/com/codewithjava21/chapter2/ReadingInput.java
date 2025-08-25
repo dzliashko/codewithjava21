@@ -9,7 +9,14 @@ public class ReadingInput {
         String inputString = inputScanner.nextLine();
         inputScanner.close();
 
-        int number = Integer.parseInt(inputString);
-        System.out.printf("Symbol for ASCII code %d - is %c", number, (char) number);
+        try {
+            int number = Integer.parseInt(inputString);
+            System.out.printf("Symbol for ASCII code %d - is %c", number, (char) number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
