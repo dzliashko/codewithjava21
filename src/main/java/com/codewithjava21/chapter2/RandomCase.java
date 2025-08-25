@@ -6,7 +6,7 @@ public class RandomCase {
     public static void main(String[] args) {
         Random random = new Random();
         boolean fourFound = false;
-        String result = "";
+        String result;
         do {
             int number = random.nextInt(5) + 1;
             switch (number) {
