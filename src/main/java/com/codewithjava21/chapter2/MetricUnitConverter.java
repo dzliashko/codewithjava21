@@ -18,7 +18,7 @@ public class MetricUnitConverter {
         if (spacePos > 0) {
             try {
                 MeasurementValue measurementValue = new MeasurementValue(inputStr);
-                System.out.println(measurementValue.toString());
+                System.out.println(measurementValue);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
