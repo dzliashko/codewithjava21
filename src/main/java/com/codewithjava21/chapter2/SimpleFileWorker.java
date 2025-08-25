@@ -1,8 +1,6 @@
 package com.codewithjava21.chapter2;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class SimpleFileWorker {
     public static void main(String[] args) {
@@ -21,5 +19,17 @@ public class SimpleFileWorker {
             e.printStackTrace();
         }
         System.out.println("Writing to file finished");
+        System.out.println();
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("gamesCatalog.txt"));
+            String gameLine;
+            while ((gameLine = reader.readLine()) != null) {
+                System.out.println(gameLine);
+            }
+        } catch (IOException e) {
+            System.out.println("Error writing to file");
+            e.printStackTrace();
+        }
     }
 }
