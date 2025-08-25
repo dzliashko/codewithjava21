@@ -5,16 +5,21 @@ import java.util.Random;
 public class RandomCase {
     public static void main(String[] args) {
         Random random = new Random();
-        int number = random.nextInt(5) + 1;
+
         String result = "";
-        switch (number) {
-            case 1 -> result = "One";
-            case 2 -> result = "Two";
-            case 3 -> result = "Three";
-            case 4 -> result = "Four";
-            case 5 -> result = "Five";
-            default -> result = "Something strange";
+        for (int i = 0; i < 10; i++) {
+            int number = random.nextInt(5) + 1;
+            switch (number) {
+                case 1 -> result = "One";
+                case 2 -> result = "Two";
+                case 3 -> result = "Three";
+                case 4 -> result = "Four";
+                case 5 -> result = "Five";
+                default -> result = "Something strange";
+            }
+            System.out.println(result);
         }
-        System.out.println(result);
+
+
     }
 }
