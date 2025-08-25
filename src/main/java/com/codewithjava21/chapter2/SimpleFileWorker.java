@@ -23,9 +23,19 @@ public class SimpleFileWorker {
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("gamesCatalog.txt"));
-            String gameLine;
-            while ((gameLine = reader.readLine()) != null) {
-                System.out.println(gameLine);
+            String gameLine = reader.readLine();
+            boolean headerRead = false;
+            while (gameLine != null) {
+                if (headerRead) {
+                    String[] gameColumns = gameLine.split(",");
+                    int year = Integer.parseInt(gameColumns[2].trim());
+                    if (year == 1981) {
+                        System.out.println(gameLine);
+                    }
+                } else {
+                    headerRead = true;
+                }
+                gameLine = reader.readLine();
             }
         } catch (IOException e) {
             System.out.println("Error writing to file");
