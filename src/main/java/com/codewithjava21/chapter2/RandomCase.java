@@ -7,7 +7,7 @@ public class RandomCase {
         Random random = new Random();
         boolean fourFound = false;
         String result = "";
-        while (!fourFound) {
+        do {
             int number = random.nextInt(5) + 1;
             switch (number) {
                 case 1 -> result = "One";
@@ -21,7 +21,7 @@ public class RandomCase {
                 default -> result = "Something strange";
             }
             System.out.println(result);
-        }
+        } while (!fourFound);
 
 
     }
