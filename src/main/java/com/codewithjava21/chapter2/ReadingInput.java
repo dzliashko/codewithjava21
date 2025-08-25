@@ -11,7 +11,12 @@ public class ReadingInput {
 
         try {
             int number = Integer.parseInt(inputString);
-            System.out.printf("Symbol for ASCII code %d - is %c", number, (char) number);
+            if (number > 31) {
+                System.out.printf("Symbol for ASCII code %d - is %c", number, (char) number);
+            } else {
+                System.out.println("Sorry, only ASCII code 32 and higher is allowed ");
+            }
+
         } catch (NumberFormatException e) {
             System.out.println("Invalid input");
         } catch (Exception e) {
