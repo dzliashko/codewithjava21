@@ -4,7 +4,8 @@ import java.util.Collection;
 
 public class WorkingWithCollections {
     public static void main(String[] args) {
-
+        String[] heroes = {"Byorki", "K'lar", "Tyrenni",
+                "Athena", "Jarrod"};
     }
 
     private static void printCollection(Collection collection) {
