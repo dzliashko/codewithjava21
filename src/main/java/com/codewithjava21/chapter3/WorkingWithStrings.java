@@ -78,7 +78,7 @@ public class WorkingWithStrings {
         String nickname4 = "Bob";
 
         System.out.println("\nPattern for Bob: ");
-        Pattern bobPattern = Pattern.compile("[B][R]ob");
+        Pattern bobPattern = Pattern.compile("[B|R]ob");
 
         matchName(bobPattern, nickname);
         matchName(bobPattern, nickname2);
@@ -88,14 +88,14 @@ public class WorkingWithStrings {
         matchName(bobPattern, firstName);
 
         System.out.println("\nPattern for Victoria: ");
-        Pattern victoriaPattern = Pattern.compile("[Vic][T|t]oria");
+        Pattern victoriaPattern = Pattern.compile("[Vic|][[T|t]oria]");
 
-        matchName(bobPattern, nickname);
-        matchName(bobPattern, nickname2);
-        matchName(bobPattern, nickname3);
-        matchName(bobPattern, nickname4);
-        matchName(bobPattern, robert);
-        matchName(bobPattern, firstName);
+        matchName(victoriaPattern, nickname);
+        matchName(victoriaPattern, nickname2);
+        matchName(victoriaPattern, nickname3);
+        matchName(victoriaPattern, nickname4);
+        matchName(victoriaPattern, robert);
+        matchName(victoriaPattern, firstName);
     }
 
     private static String properCase(String str) {
