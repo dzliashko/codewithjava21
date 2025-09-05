@@ -1,7 +1,7 @@
 package com.codewithjava21.chapter4;
 
 public class CoordinateArrays {
-    private static String[][] gameGrid = new String[5][5];
+    private static final String[][] gameGrid = new String[5][5];
 
     public static void main(String[] args) {
         gameGrid[3][2] = "Byorki - Ranger";
