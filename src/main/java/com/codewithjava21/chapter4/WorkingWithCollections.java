@@ -8,12 +8,18 @@ public class WorkingWithCollections {
                 "Athena", "Jarrod"};
 
 //        Set<String> heroesSet = new HashSet<>();
-        Set<String> heroesSet = new LinkedHashSet<>();
+//        Set<String> heroesSet = new LinkedHashSet<>();
+        Set<String> heroesSet = new TreeSet<>();
         Collections.addAll(heroesSet, heroes);
         printCollection(heroesSet);
         heroesSet.add("Byorki");
         printCollection(heroesSet);
+//      in HashSet not support order of elements
+//      in LinkedHashSet support order of elements
+//      in TreeSet support alphanumerical order of elements
         heroesSet.add("Rik");
+        printCollection(heroesSet);
+        heroesSet.remove("Rik");
         printCollection(heroesSet);
     }
 
