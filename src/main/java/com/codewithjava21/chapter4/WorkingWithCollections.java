@@ -7,7 +7,8 @@ public class WorkingWithCollections {
         String[] heroes = {"Byorki", "K'lar", "Tyrenni",
                 "Athena", "Jarrod"};
 
-        Set<String> heroesSet = new HashSet<>();
+//        Set<String> heroesSet = new HashSet<>();
+        Set<String> heroesSet = new LinkedHashSet<>();
         Collections.addAll(heroesSet, heroes);
         printCollection(heroesSet);
         heroesSet.add("Byorki");
