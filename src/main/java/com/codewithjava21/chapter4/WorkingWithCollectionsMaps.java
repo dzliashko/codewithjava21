@@ -1,15 +1,14 @@
 package com.codewithjava21.chapter4;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class WorkingWithCollectionsMaps {
     public static void main(String[] args) {
 //        Map<String, String> spellBook = new HashMap<>();
 //        Hashtable support interaction with multiple threads
-        Map<String, String> spellBook = new Hashtable<>();
+//        Map<String, String> spellBook = new Hashtable<>();
+//        LinkedHashMap support the order that they were added
+        Map<String, String> spellBook = new LinkedHashMap<>();
         spellBook.put("Fireball", "A ball of fire that inflicts 8 damage per level of magic.");
         spellBook.put("Healing Touch", "Touching an injured player recovers 5 hit points per character level.");
         spellBook.put("Lightning Bolt", "A stream of lightning that inflicts 10 damage per level of magic.");
