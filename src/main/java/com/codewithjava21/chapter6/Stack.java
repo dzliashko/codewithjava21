@@ -1,7 +1,5 @@
 package com.codewithjava21.chapter6;
 
-import java.util.Arrays;
-
 public class Stack {
     private Item[] items;
     private int maxCount;
@@ -50,9 +48,13 @@ public class Stack {
 
     @Override
     public String toString() {
-        return "Stack{" +
-                "items=" + Arrays.toString(items) +
-                ", stackCount=" + stackCount +
-                '}';
+        StringBuilder returnVal = new StringBuilder("\n");
+        for (int counter = stackCount - 1; counter >= 0; counter--) {
+            returnVal.append(counter);
+            returnVal.append(" - ");
+            returnVal.append(items[counter].getName());
+            returnVal.append("\n");
+        }
+        return returnVal.toString();
     }
 }
