@@ -45,12 +45,8 @@ public class RPGSimulation {
             }
         }
 
-        Map<String, String> spellbook = new TreeMap<>();
-        spellbook.put("Fireball", "A ball of fire that inflicts 8 damage per level of magic.");
-        spellbook.put("Healing Touch", "Touching an injured player recovers 5 hit points per character level.");
-        spellbook.put("Lightning Bolt", "A stream of lightning that inflicts 10 damage per level of magic.");
-        spellbook.put("Create Water", "Creates 10 liters of water per level of magic.");
-        spellbook.put("Transmutation", "Converts common items into gold.");
+
+        Map<String, String> spellbook = fillSpellBook();
 
         Hero byorki = new Hero("Byorki", 8, 5, 5);
         Hero klar = new Hero("K'lar", 10, 12, 3);
@@ -118,10 +114,20 @@ public class RPGSimulation {
         }
     }
 
+    static Map<String, String> fillSpellBook() {
+        Map<String, String> spellbook = new TreeMap<>();
+        spellbook.put("Fireball", "A ball of fire that inflicts 8 damage per level of magic.");
+        spellbook.put("Healing Touch", "Touching an injured player recovers 5 hit points per character level.");
+        spellbook.put("Lightning Bolt", "A stream of lightning that inflicts 10 damage per level of magic.");
+        spellbook.put("Create Water", "Creates 10 liters of water per level of magic.");
+        spellbook.put("Transmutation", "Converts common items into gold.");
+        return spellbook;
+    }
+
 
     private static List<Object> generatePlayerOrder(List<Hero> heroList, List<Monster> monsterList) {
-        List<Hero> tempHeroList = new ArrayList<Hero>(List.copyOf(heroList));
-        List<Monster> tempMonsterList = new ArrayList<Monster>(List.copyOf(monsterList));
+        List<Hero> tempHeroList = new ArrayList<>(List.copyOf(heroList));
+        List<Monster> tempMonsterList = new ArrayList<>(List.copyOf(monsterList));
         List<Object> returnValue = new ArrayList<>();
         Random random = new Random();
         int playerCount = heroList.size() + monsterList.size();
