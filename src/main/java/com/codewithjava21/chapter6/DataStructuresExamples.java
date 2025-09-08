@@ -1,24 +1,24 @@
 package com.codewithjava21.chapter6;
 
 public class DataStructuresExamples {
+    static Item martian = new Item("The Martian");
+    static Item patriotGames = new Item("Patriot Games");
+    static Item bladerunner = new Item("Blade Runner");
+    static Item bladerunner2049 = new Item("Blade Runner 2049");
+    static Item apollo13 = new Item("Apollo 13");
+    static Item firstMan = new Item("First Man");
+    static Item empireStrikesBack = new Item("The Empire Strikes Back");
+    static Item rogueOne = new Item("Rogue One");
+    static Item alexander = new Item("Alexander");
+    static Item starwars = new Item("Star Wars");
+    static Item runningMan = new Item("Running Man");
+
     public static void main(String[] args) {
         playWithStack();
     }
 
     private static void playWithStack() {
         Stack stack = new Stack();
-
-        Item martian = new Item("The Martian");
-        Item patriotGames = new Item("Patriot Games");
-        Item bladerunner = new Item("Blade Runner");
-        Item bladerunner2049 = new Item("Blade Runner 2049");
-        Item apollo13 = new Item("Apollo 13");
-        Item firstMan = new Item("First Man");
-        Item empireStrikesBack = new Item("The Empire Strikes Back");
-        Item rogueOne = new Item("Rogue One");
-        Item alexander = new Item("Alexander");
-        Item starwars = new Item("Star Wars");
-        Item runningMan = new Item("Running Man");
 
         System.out.println("Stack example:");
 
