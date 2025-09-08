@@ -10,4 +10,10 @@ public class MathExamplesTests {
         assertEquals(8, MathExamples.add(5, 3));
         assertEquals(12, MathExamples.add(6, 6));
     }
+
+    @Test
+    public void testSubtract() {
+        assertEquals(2, MathExamples.subtract(5, 3));
+        assertEquals(0, MathExamples.subtract(6, 6));
+    }
 }
