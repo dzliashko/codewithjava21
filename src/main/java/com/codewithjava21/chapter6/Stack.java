@@ -18,9 +18,7 @@ public class Stack {
         maxCount = maxCount + 5;
         Item[] newArray = new Item[maxCount];
 
-        for (int counter = 0; counter < stackCount; counter++) {
-            newArray[counter] = items[counter];
-        }
+        if (stackCount >= 0) System.arraycopy(items, 0, newArray, 0, stackCount);
         items = newArray;
     }
 
