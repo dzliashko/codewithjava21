@@ -15,7 +15,7 @@ public class DataStructuresExamples {
 
     public static void main(String[] args) {
 //        playWithStack();
-        playWithSQueue();
+        playWithQueue();
     }
 
     private static void playWithStack() {
@@ -46,7 +46,7 @@ public class DataStructuresExamples {
         System.out.println(stack);
     }
 
-    private static void playWithSQueue() {
+    private static void playWithQueue() {
         System.out.println("Queue example:");
         Queue queue = new Queue();
 
@@ -60,6 +60,11 @@ public class DataStructuresExamples {
         System.out.println(queue.dequeue().getName() + " was dequeued.");
         System.out.println(queue.dequeue().getName() + " was dequeued.");
         System.out.println(queue);
+    }
+
+    private static void playWithLinkedList() {
+        System.out.println("LinkedList example:");
+        LinkedList list = new LinkedList();
     }
 }
 
