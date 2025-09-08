@@ -16,7 +16,8 @@ public class DataStructuresExamples {
     public static void main(String[] args) {
 //        playWithStack();
 //        playWithQueue();
-        playWithLinkedList();
+//        playWithLinkedList();
+        playWithTree();
     }
 
     private static void playWithStack() {
@@ -99,6 +100,20 @@ public class DataStructuresExamples {
         System.out.println("Now remove " + meren.getName());
         linkedList.removeItemByName(meren.getName());
         System.out.println(linkedList);
+    }
+
+    private static void playWithTree() {
+        System.out.println("Tree example:");
+        Tree tree = new Tree(47);
+        tree.insert(48);
+        tree.insert(20);
+        tree.insert(15);
+        tree.insert(26);
+        tree.insert(18);
+
+        tree.traverseFromRoot();
+        System.out.println();
+        tree.reverseFromRoot();
     }
 }
 
