@@ -10,7 +10,7 @@ import java.util.List;
 public class AstronautPostgresDAL {
     private static PostgresConn postgres;
 
-    protected record AstronautMission(
+    public record AstronautMission(
             String missionName,
             String startDate,
             String endDate,

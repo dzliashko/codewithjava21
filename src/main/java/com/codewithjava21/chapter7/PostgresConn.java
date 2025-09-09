@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class PostgresConn {
-    private Connection conn;
+    private static Connection conn;
 
     public PostgresConn(String url, String username, String password) {
         connectToPostgres(url, username, password);
@@ -19,7 +19,7 @@ public class PostgresConn {
         }
     }
 
-    public void closePostgresConnection() {
+    public static void closePostgresConnection() {
         try {
             conn.close();
         } catch (SQLException e) {
